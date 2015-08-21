@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+			http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+			version="2.1">
+
+	<persistence-unit name="rastreioPU" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+<!-- 		<non-jta-data-source>java:comp/env/jdbc/tomcatDataSource</non-jta-data-source> -->
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+<!-- 			<property name="hibernate.hbm2ddl.auto" value="validate" />	 -->
+			<property name="show_sql" value="true"/>
+			<property name="format_sql" value="true"/>
+			<property name="use_sql_comments" value="true"/>	
+			<property name="org.hibernate.flushMode" value="COMMIT"/>
+			<property name="hibernate.max_fetch_depth" value="0"/>			
+						
+			<property name="hibernate.cache.use_second_level_cache" value="true"/>
+			<property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+			<property name="hibernate.cache.use_query_cache" value="true"/>
+			<property name="hibernate.search.generate_statistics" value="true"/>
+			<property name="hibernate.search.jmx_enabled" value="true"/>
+			<property name="hibernate.ejb.interceptor" value="com.segsat.rastreio.interceptor.CacheHibernateInterceptor" />
+			
+		</properties>
+	</persistence-unit>
+</persistence>

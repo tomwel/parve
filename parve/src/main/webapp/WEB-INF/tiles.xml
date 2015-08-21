@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">  
+
+<tiles-definitions>
+
+    <!-- Master -->
+    
+    <definition name="master.page" template="/public/template/master.jsp">
+        <put-attribute name="sidebar" value="/public/template/sidebar.jsp"/>
+        <put-attribute name="header" value="/public/template/header.jsp"/>
+        <put-attribute name="footer" value="/public/template/footer.jsp"/>
+        
+        <put-attribute name="migalha-class" cascade="true" value=""/>
+        <put-attribute name="migalha-text" cascade="true" value=""/>
+    </definition>
+
+    <!-- Master Login -->
+    
+    <definition name="login-master.page" template="/public/template/login-master.jsp">
+    </definition>
+
+    <!-- Protected Pages -->    
+
+    <definition name="start" extends="master.page">
+        <put-attribute name="body" value="/protected/view/start.jsp"/>
+        <put-attribute name="popup" cascade="true" value="/protected/view/popups/startPopUp.jsp" />
+        <put-attribute name="allAreaGeograficaPanel" cascade="true" value="/protected/partials/allAreaGeograficaPanel.jsp" />
+        <put-attribute name="newEditAreaGeograficaPanel" cascade="true" value="/protected/partials/newEditAreaGeograficaPanel.jsp" />        
+        <put-attribute name="newAreaCategoriaPanel" cascade="true" value="/protected/partials/newAreaCategoriaPanel.jsp" />          
+        <put-attribute name="assocVeiculoAreaPanel" cascade="true" value="/protected/partials/assocVeiculoAreaPanel.jsp" />                
+        <put-attribute name="migalha-text" cascade="true" value="Home"/>  
+        <put-attribute name="migalha-class" cascade="true" value="entypo-home"/>      
+    </definition>
+    
+    <definition name="goodcardmaster" extends="login-master.page">
+        <put-attribute name="body" value="/protected/view/goodcard/goodcardMaster.jsp"/>
+    </definition>  
+    
+    <definition name="goodcardUsuario" extends="login-master.page">
+        <put-attribute name="body" value="/protected/view/goodcard/mensagemUsuario.jsp"/>
+    </definition>
+    
+    <definition name="inadiplencia5" extends="login-master.page">
+        <put-attribute name="body" value="/protected/view/inadiplencia/inadiplencia5.jsp"/>
+    </definition>
+    
+    <definition name="inadiplenciaTrinta" extends="login-master.page">
+        <put-attribute name="body" value="/protected/view/inadiplencia/inadiplenciaTrinta.jsp"/>
+    </definition>
+
+    <definition name="usersList" extends="master.page">
+        <put-attribute name="body" value="/protected/view/users/users.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Usuários"/>
+        <put-attribute name="migalha-class" cascade="true" value="entypo-users"/>     
+    </definition>
+
+    <definition name="userProfile" extends="master.page">
+        <put-attribute name="body" value="/protected/view/users/userProfile.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Usuário > Profile"/>
+        <put-attribute name="migalha-class" cascade="true" value="entypo-users"/>
+    </definition>
+    
+    <definition name="dashboard" extends="master.page">
+        <put-attribute name="body" value="/protected/view/dashboard/dashboard.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Dashboard"/>
+        <put-attribute name="migalha-class" cascade="true" value="entypo-gauge"/>
+    </definition>
+
+    <definition name="expediente" extends="master.page">
+        <put-attribute name="body" value="/protected/view/expediente/expediente.jsp"/>
+		<put-attribute name="popup" cascade="true" value="/protected/view/popups/expedientePopUp.jsp" />     
+        <put-attribute name="migalha-text" cascade="true" value="Expediente"/>
+        <put-attribute name="migalha-class" cascade="true" value="entypo-gauge"/>
+    </definition>
+
+    <definition name="driversList" extends="master.page">
+        <put-attribute name="body" value="/protected/view/drivers/drivers.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Motoristas"/>        
+    </definition>
+
+    <definition name="driverProfile" extends="master.page">
+        <put-attribute name="body" value="/protected/view/drivers/driverProfile.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Motorista > Profile"/>
+    </definition>
+    
+    <definition name="vehicleList" extends="master.page">
+        <put-attribute name="body" value="/protected/view/vehicle/vehicles.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Veículos"/>        
+    </definition>
+
+    <definition name="vehicleProfile" extends="master.page">
+        <put-attribute name="body" value="/protected/view/vehicles/vehicleProfile.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Veículo > Profile"/>
+    </definition>
+    
+    <definition name="eventos" extends="master.page">
+        <put-attribute name="body" value="/protected/view/eventos/eventos.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Eventos"/>
+        <put-attribute name="migalha-class" cascade="true" value="entypo-bell"/>
+    </definition>
+    
+    <definition name="itemCategoria" extends="master.page">
+        <put-attribute name="body" value="/protected/view/itemCategoria/itemCategoria.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Cadastro de Itens e Categorias"/>
+        <put-attribute name="migalha-class" cascade="true" value="entypo-tools"/>
+    </definition>
+    
+    <definition name="planoManutencao" extends="master.page">
+        <put-attribute name="body" value="/protected/view/planoManutencao/planoManutencao.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Plano de Manutencao"/>
+        <put-attribute name="migalha-class" cascade="true" value="entypo-tools"/>        
+    </definition>     
+    
+    <definition name="listPerfil" extends="master.page">
+        <put-attribute name="body" value="/protected/view/perfil/perfil.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Perfil"/>        
+		<put-attribute name="migalha-class" cascade="true" value="entypo-users"/>    
+    </definition>     
+    
+    <definition name="edicaoPerfil" extends="master.page">
+        <put-attribute name="body" value="/protected/view/perfil/edicaoPerfil.jsp"/>
+        <put-attribute name="migalha-text" cascade="true" value="Perfil > Gerenciamento de perfil"/>        
+		<put-attribute name="migalha-class" cascade="true" value="entypo-users"/>    
+    </definition>          
+
+    <definition name="relatorioProcessos" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/processoRelatorio/relatorioProcessos.jsp"/>
+    	<put-attribute name="migalha-text" cascade="true" value="Relatório > Processos de relatório"/>
+    	<put-attribute name="migalha-class" cascade="true" value="entypo-hourglass"/>
+    </definition>  
+
+    
+    <definition name="relatorioPosicao" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/report/relatorioPosicao.jsp"/>
+    	<put-attribute name="formularioRelatorio" cascade="true" value="/protected/partials/formularioRelatorio.jsp"/>
+    	<put-attribute name="parametroRelatorio" cascade="true" value="/protected/partials/parametrosRelatorioPosicao.jsp"/>
+    	<put-attribute name="migalha-text" cascade="true" value="Relatório > Relatório de posição"/>
+    	<put-attribute name="migalha-class" cascade="true" value="entypo-doc-text"/>
+    </definition>  
+    
+    <definition name="relatorioPosicaoKML" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/report/relatorioPosicaoKML.jsp"/>
+    	<put-attribute name="formularioRelatorio" cascade="true" value="/protected/partials/formularioRelatorio.jsp"/>
+    	<put-attribute name="parametroRelatorio" cascade="true" value="/protected/partials/parametrosRelatorioPosicaoKML.jsp"/>
+    	<put-attribute name="migalha-text" cascade="true" value="Relatório > Relatório de posição KML"/>
+    	<put-attribute name="migalha-class" cascade="true" value="entypo-doc-text"/>
+    </definition>     
+    
+    <definition name="relatorioDashboard" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/report/relatorioDashboard.jsp"/>
+    	<put-attribute name="formularioRelatorio" cascade="true" value="/protected/partials/formularioRelatorio.jsp"/>
+    	<put-attribute name="parametroRelatorio" cascade="true" value="/protected/partials/parametrosRelatorioDashboard.jsp"/>
+    	<put-attribute name="migalha-text" cascade="true" value="Relatório > Relatório de posição"/>
+    	<put-attribute name="migalha-class" cascade="true" value="entypo-doc-text"/>
+    </definition>       
+    
+    <definition name="relatorioAreaGeografica" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/report/relatorioAreaGeografica.jsp"/>
+    	<put-attribute name="formularioRelatorio" cascade="true" value="/protected/partials/formularioRelatorio.jsp"/>
+    	<put-attribute name="parametroRelatorio" cascade="true" value="/protected/partials/parametrosRelatorioAreaGeografica.jsp"/>    	
+    	<put-attribute name="migalha-text" cascade="true" value="Relatório > Relatório de área geográfica"/>
+    	<put-attribute name="migalha-class" cascade="true" value="entypo-doc-text"/>
+    </definition>   
+    
+    <definition name="relatorioPontoDeReferencia" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/report/relatorioPontoReferencia.jsp"/>
+    	<put-attribute name="formularioRelatorio" cascade="true" value="/protected/partials/formularioRelatorio.jsp"/>
+    	<put-attribute name="parametroRelatorio" cascade="true" value="/protected/partials/parametrosRelatorioPontoDeReferencia.jsp"/>    	
+    	<put-attribute name="migalha-text" cascade="true" value="Relatório > Relatório de ponto de referência"/>
+    	<put-attribute name="migalha-class" cascade="true" value="entypo-doc-text"/>
+    </definition> 
+    
+    <definition name="relatorioResumoDiario" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/report/relatorioResumoDiario.jsp"/>
+    	<put-attribute name="formularioRelatorio" cascade="true" value="/protected/partials/formularioRelatorio.jsp"/>   
+		<put-attribute name="parametroRelatorio" cascade="true" value="/protected/partials/parametrosRelatorioResumoDiario.jsp"/>  
+		<put-attribute name="migalha-text" cascade="true" value="Relatório > Relatório de resumo diário"/>  
+		<put-attribute name="migalha-class" cascade="true" value="entypo-doc-text"/>	    	 
+    </definition>  
+    
+    <definition name="relatorioPontosDeParada" extends="master.page">
+    	<put-attribute name="body" value="/protected/view/report/relatorioPontosdeParada.jsp"/>
+    	<put-attribute name="formularioRelatorio" cascade="true" value="/protected/partials/formularioRelatorio.jsp"/>   
+		<put-attribute name="parametroRelatorio" cascade="true" value="/protected/partials/parametrosRelatorioPontosdeParada.jsp"/>    	
+		<put-attribute name="migalha-text" cascade="true" value="Relatório > Relatório de pontos de parada"/>    	 
+		<put-attribute name="migalha-class" cascade="true" value="entypo-doc-text"/>
+    </definition>
+
+    <!-- Public Pages -->
+    
+    <definition name="login" extends="login-master.page">
+        <put-attribute name="body" value="/public/view/login.jsp"/>
+    </definition>
+
+    <definition name="forgot" extends="login-master.page">
+        <put-attribute name="body" value="/public/view/forgot-password.jsp"/>
+    </definition>
+
+    <definition name="change" extends="login-master.page">
+        <put-attribute name="body" value="/public/view/change-password.jsp"/>
+    </definition>
+
+    <definition name="changeSuccess" extends="login-master.page">
+        <put-attribute name="body" value="/public/view/change-password-success.jsp"/>
+    </definition>
+    
+    <definition name="changeFailed" extends="login-master.page">
+        <put-attribute name="body" value="/public/view/change-password-failed.jsp"/>
+    </definition>
+    
+    <definition name="customError" template="/public/error/customError.jsp">
+    
+    </definition>                   
+
+</tiles-definitions>
