@@ -14,20 +14,20 @@
 	<mvc:resources location="/assets/css/**" mapping="/assets/css/**" cache-period="0"/>
 
     <!-- Login Interceptor -->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/protected/**"/>
-            <bean class="com.segsat.rastreio.interceptor.GoodCardAceitacaoInterceptor"/>
-        </mvc:interceptor>
-        <!-- workaround to fix IE8 problem -->
-        <bean id="webContentInterceptor"
-              class="org.springframework.web.servlet.mvc.WebContentInterceptor">
-            <property name="cacheSeconds" value="0"/>
-            <property name="useExpiresHeader" value="true"/>
-            <property name="useCacheControlHeader" value="true"/>
-            <property name="useCacheControlNoStore" value="false"/>
-        </bean>
-    </mvc:interceptors>
+<!--     <mvc:interceptors> -->
+<!--         <mvc:interceptor> -->
+<!--             <mvc:mapping path="/protected/**"/> -->
+<!--             <bean class="com.segsat.rastreio.interceptor.GoodCardAceitacaoInterceptor"/> -->
+<!--         </mvc:interceptor> -->
+<!--         workaround to fix IE8 problem -->
+<!--         <bean id="webContentInterceptor" -->
+<!--               class="org.springframework.web.servlet.mvc.WebContentInterceptor"> -->
+<!--             <property name="cacheSeconds" value="0"/> -->
+<!--             <property name="useExpiresHeader" value="true"/> -->
+<!--             <property name="useCacheControlHeader" value="true"/> -->
+<!--             <property name="useCacheControlNoStore" value="false"/> -->
+<!--         </bean> -->
+<!--     </mvc:interceptors> -->
 
     <!-- TILES -->
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">

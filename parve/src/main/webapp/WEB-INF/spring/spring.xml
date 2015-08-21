@@ -14,38 +14,22 @@
 		
     <!-- Basic Configurations -->
     <context:annotation-config/>
-
-	<context:component-scan base-package="com.segsat.rastreio.application.context"/>
-    <context:component-scan base-package="com.segsat.rastreio.model"/>
-    <context:component-scan base-package="com.segsat.rastreio.cache"/>
-    <context:component-scan base-package="com.segsat.rastreio.repository"/>
-    <context:component-scan base-package="com.segsat.rastreio.service"/>
-    <context:component-scan base-package="com.segsat.rastreio.controller"/>
-    <context:component-scan base-package="com.segsat.rastreio.aop"/>
-    <context:component-scan base-package="com.segsat.rastreio.job"/>
-    <context:component-scan base-package="com.segsat.rastreio.websocket"/>
-    <context:component-scan base-package="com.segsat.rastreio.maplink"/>
-    <context:component-scan base-package="com.segsat.rastreio.backgroundtask"/>
-
+	
+	<context:component-scan base-package="com.tomwel.parve.controller"/>
+	<context:component-scan base-package="com.tomwel.parve.exception"/>
+	<context:component-scan base-package="com.tomwel.parve.filter"/>
+	<context:component-scan base-package="com.tomwel.parve.model.enumerator"/>
+	<context:component-scan base-package="com.tomwel.parve.service"/>
+	<context:component-scan base-package="com.tomwel.parve.util"/>
+	<context:component-scan base-package="com.tomwel.parve.vo"/>	
+	
     <!-- SpringMVC -->
     <import resource="spring-mvc.xml"/>
 
     <!-- SpringData -->
     <import resource="spring-jpa.xml"/>
-    
-    <!-- SpringAOP -->
-	<import resource="spring-aop.xml"/>
 	
     <!-- SpringSecurity -->
-    <import resource="spring-security.xml"/>
-    
-	<!-- SpringJobQuartz -->
-    <import resource="spring-job.xml"/>  
-    
-    <!-- JMX -->  
-    <import resource="spring-jmx.xml"/>  
-    
-    <!-- Redis -->  
-    <import resource="spring-redis.xml"/>     
+    <import resource="spring-security.xml"/>  
     
 </beans>
